@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+    </div>
+    <a href="https://google.com" id="link">Goggle</a>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    // console.log(parent.children[1].innerHTML);
+    for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML);
+    }
+    parent.children[1].style.color = "orange";
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    // const days = document.querySelector('.day');
+    // console.log(days.nextElementSibling);
+    // console.log(days.parentElement);
+    // console.log("Nodes : ",parent.childNodes)
+
+    parent.children[1].innerHTML = "gaurav";
+
+    let p = document.createElement("p");
+    p.innerText = "Hello bro kese ho";
+    document.body.appendChild(p);
+    p.style.color = "orange";
+    p.style.backgroundColor = "blue";
+    p.style.padding = "10px";
+    p.style.borderRadius = "20px";
+    p.remove();
+    const link = document.querySelector("#link");
+    console.log(link.getAttribute("href"));
+    console.log(link.setAttribute("id","link_id"));
+    // console.log(link);
+    console.log(link.setAttribute("href","https://www.facebook.com"));
+    console.log(link);
+</script>
+</html>

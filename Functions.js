@@ -55,10 +55,24 @@
 
 
 
-const mynewarray = [200,400,100,600];
-function returnsecondvalue(getarray){
-    return getarray[1];
+// const mynewarray = [200,400,100,600];
+// function returnsecondvalue(getarray){
+//     return getarray[1];
+// }
+
+// console.log(returnsecondvalue(mynewarray));
+// console.log(returnsecondvalue([200,300,400,1000]));
+
+
+//************ Callback Function ******************
+function work(Callback){
+    console.log("Hello bro");
+    Callback();
+    console.log("Work done");
 }
 
-console.log(returnsecondvalue(mynewarray));
-console.log(returnsecondvalue([200,300,400,1000]));
+function eat(){
+    console.log("Eat your food");
+}
+
+work(eat);
