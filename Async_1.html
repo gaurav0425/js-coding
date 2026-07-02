@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav nd code</title>
+</head>
+<body>
+    <h1>Gaurav nd code</h1>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+</body>
+<script>
+   const saydate = function(str){
+    console.log(str,Date.now());
+   }
+//    setInterval(saydate,1000,"Gaurav");
+let stop;
+   document.querySelector("#Start").addEventListener("click",function(){
+    console.log("Started");
+   stop =  setInterval(saydate,1000,"Gaurav");  
+   })
+
+   document.querySelector("#Stop").addEventListener("click",function(){
+    console.log("Stopped");
+    clearInterval(stop);
+   })
+</script>
+</html>
